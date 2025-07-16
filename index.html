@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="icon" href="./images/todo icon.png" />
+    <link rel="stylesheet" href="./css/master.css" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <!-- ==> link toaster at bottom to override  -->
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <section class="p-3">
+      <h1 class="p-2 mt-4 text-center text-capitalize fw-bolder text-white">
+        To-do List
+      </h1>
+      <div
+        class="container ProgressContent border p-3 mx-auto bg-opacity-50 bg-light m-4 d-flex align-items-center justify-content-between rounded shadow"
+      >
+        <div class="left-content flex-grow-1">
+          <h2 class="h5">Todo App</h2>
+          <span class="small">Completed Tasks !</span>
+          <div id="progressBar" class="overflow-hidden">
+            <div id="progress"></div>
+          </div>
+        </div>
+
+        <div
+          class="right-content d-flex align-items-center justify-content-center p-2 bg-opacity-50"
+        >
+          <span>0</span>/<span>0</span>
+        </div>
+      </div>
+      <div class="mx-auto my-4 formContainer">
+        <form class="d-flex gap-4 bg-white p-3 rounded shadow-md">
+          <input
+            type="text"
+            placeholder="Enter The Task..."
+            class="form-control customInput border-0"
+          />
+          <button class="btnAdd rounded" id="addTask">Add</button>
+        </form>
+        <div class="loading d-none">
+          <span class="loader"></span>
+        </div>
+        <ul
+          id="menuTasks"
+          class="menutasks list-styled-none bg-white rounded mt-5 p-4"
+        ></ul>
+      </div>
+    </section>
+
+    <!--link j query frist -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- link sweet alert package after j query  -->
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.all.min.js
+"></script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
