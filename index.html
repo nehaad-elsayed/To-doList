@@ -8,9 +8,7 @@
     <link rel="icon" href="./images/todo icon.png" />
     <link rel="stylesheet" href="./css/master.css" />
     <link
-      href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css
-"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css"
       rel="stylesheet"
     />
     <link
@@ -50,7 +48,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css
           aria-label="Completed tasks counter"
           aria-live="polite"
         >
-        
           <span>0</span>/<span>0</span>
         </div>
       </div>
@@ -64,6 +61,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css
             placeholder="Enter The Task..."
             class="form-control customInput border-0"
             aria-label="Task description"
+            maxlength="500"
+            pattern="[a-zA-Z0-9\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF\s\-_.,!?()]+"
+            title="يُسمح فقط بالأحرف والأرقام والمسافات وبعض الرموز"
+            autocomplete="off"
+            spellcheck="false"
           />
           <button class="btnAdd rounded" id="addTask" aria-label="Add task">
             Add
@@ -76,12 +78,13 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css
         >
           <span class="loader"></span>
         </div>
-        <ul
+        <!-- <ul style="background-color: transparent;"
           id="menuTasks"
           class="menutasks list-styled-none bg-white rounded mt-5 p-4"
           role="list"
           aria-label="Task list"
-        ></ul>
+        ></ul> -->
+      <div class="ul-container"></div>
       </div>
     </section>
 
@@ -95,9 +98,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.min.css
       referrerpolicy="no-referrer"
     ></script>
     <!-- link sweet alert package after j query  -->
-    <script src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.all.min.js
-"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.21.0/dist/sweetalert2.all.min.js"></script>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
