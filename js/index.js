@@ -8,9 +8,10 @@ const ulCotainer = document.querySelector(".ul-container");
 let Tasks = [];
 let isSubmitting = false; // prevent rapid requests
 
-const apiKey = "6876bb7f34a1869ccb28dec9";
+const apiKey = "6876bb7f34a1869ccb28dec9"; 
 
 //* security and protection functions // =>>>>>
+//* this function is used to check if the text contains any dangerous characters
 function containsScript(text) {
   //* check for dangerous HTML tags // =>>>>>
   const dangerousTags =
@@ -33,6 +34,7 @@ function containsScript(text) {
   );
 }
 
+//* this function is used to remove all dangerous characters from the text
 function testInput(text) {
   //* remove all dangerous characters // =>>>>>
   return text
